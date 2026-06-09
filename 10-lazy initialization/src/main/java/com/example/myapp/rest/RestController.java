@@ -17,8 +17,8 @@ public class RestController {
     private Coach myCoach;
 
    @Autowired
-   public RestController(Coach theCoach) {
-
+   public RestController(@Qualifier("cricketCoach") Coach theCoach) {
+       System.out.println("In constructor: " + getClass().getSimpleName());
        myCoach= theCoach;
    }
 
